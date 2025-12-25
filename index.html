@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Master PostgreSQL with India's #1 interactive platform. Expert-led courses from basic SQL to advanced database architecture. Hands-on labs, Hinglish mentorship, and job-ready skills." />
+    <meta name="keywords" content="PostgreSQL Course, Database Training India, Postgres DBA, SQL Tutorial, Database Architecture, Karthik Katrotiya, PostgresMastery" />
+    <meta name="author" content="Karthik Katrotiya" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://postgresmastery.in/" />
+    <meta property="og:title" content="PostgresMastery | Expert PostgreSQL Courses in India" />
+    <meta property="og:description" content="From 'SELECT *' to High Availability. Master the world's most advanced database with India's premier learning platform." />
+    <meta property="og:image" content="https://postgresmastery.in/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://postgresmastery.in/" />
+    <meta property="twitter:title" content="PostgresMastery | Expert PostgreSQL Courses in India" />
+    <meta property="twitter:description" content="From 'SELECT *' to High Availability. Master the world's most advanced database with India's premier learning platform." />
+    <meta property="twitter:image" content="https://postgresmastery.in/og-image.jpg" />
+    
+    <link rel="canonical" href="https://postgresmastery.in/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "PostgresMastery India",
+        "url": "https://postgresmastery.in",
+        "logo": "https://postgresmastery.in/logo.png",
+        "sameAs": [
+          "https://twitter.com/postgresmastery",
+          "https://linkedin.com/company/postgresmastery"
+        ],
+        "description": "A premium PostgreSQL course platform for Indian professionals featuring an interactive 3D book syllabus.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "HSR Layout, Sector 4",
+          "addressLocality": "Bangalore",
+          "addressRegion": "KA",
+          "postalCode": "560102",
+          "addressCountry": "IN"
+        }
+      }
+    </script>
+
+    <title>PostgresMastery | Expert PostgreSQL Courses in India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Merriweather', 'serif'],
+            },
+            colors: {
+              postgres: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7', // Primary Brand Color
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+              'book-paper': '#fdfbf7',
+            },
+            animation: {
+              'beam': 'beam 8s linear infinite',
+            },
+            keyframes: {
+              beam: {
+                '0%': { top: '-10%', opacity: '0' },
+                '10%': { opacity: '1' },
+                '90%': { opacity: '1' },
+                '100%': { top: '110%', opacity: '0' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom utility for 3D Book Effect */
+      .perspective-2000 {
+        perspective: 2000px;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      .backface-hidden {
+        backface-visibility: hidden;
+      }
+      .rotate-y-180 {
+        transform: rotateY(-180deg);
+      }
+      /* Hide scrollbar for cleaner UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      /* Moving Grid Background */
+      .bg-grid-slate-100 {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23f1f5f9'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+      }
+      .bg-grid-slate-200\/50 {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23e2e8f0' stroke-opacity='0.5'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <div id="root">
+      <!-- Loading State / Fallback for slow EC2 connections -->
+      <div id="boot-loader" class="fixed inset-0 flex flex-col items-center justify-center bg-slate-950 text-white z-[9999]">
+        <div class="mb-6">
+          <svg class="animate-spin h-10 w-10 text-postgres-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+        </div>
+        <div class="font-mono text-xs text-slate-400 uppercase tracking-widest animate-pulse">
+          postgres_mastery=# SELECT 'booting...' AS status;
+        </div>
+        
+        <!-- Diagnostic Overlay (Hidden by default, shown via script on error) -->
+        <div id="boot-error" class="hidden mt-8 max-w-lg w-full p-6 bg-red-900/20 border border-red-500/50 rounded-lg font-mono text-sm">
+          <div class="text-red-400 font-bold mb-2 flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            FATAL: Boot Sequence Interrupted
+          </div>
+          <div id="error-message" class="text-slate-300 whitespace-pre-wrap break-all mb-4"></div>
+          <div class="text-[10px] text-slate-500 border-t border-slate-800 pt-4">
+            PRO-TIP: If deploying to EC2/Nginx, ensure your server supports .tsx MIME types or use a bundler (Vite/Webpack) to convert source files to standard JS.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Catcher Script -->
+    <script>
+      window.addEventListener('error', function(event) {
+        if (event.filename && event.filename.endsWith('.tsx')) {
+          const loader = document.getElementById('boot-loader');
+          const errorBox = document.getElementById('boot-error');
+          const msgEl = document.getElementById('error-message');
+          
+          if (loader && errorBox && msgEl) {
+            errorBox.classList.remove('hidden');
+            msgEl.textContent = `Error loading: ${event.filename}\nReason: ${event.message}\n\nBrowsers cannot natively execute .tsx files. You likely need to build your project or check Nginx MIME types.`;
+          }
+        }
+      });
+    </script>
+
+    <!-- Explicitly load the entry point for static hosting -->
+    <script type="module" src="./index.tsx"></script>
+    
+    <!-- Cleanup loader if app starts successfully -->
+    <script>
+      window.addEventListener('load', function() {
+        const startTime = Date.now();
+        const MIN_LOADING_TIME = 3000; // Ensuring 3s delay for the SELECT status animation
+
+        // If the root has been populated by React, hide loader after MIN_LOADING_TIME
+        const checkInterval = setInterval(() => {
+          const root = document.getElementById('root');
+          const now = Date.now();
+          const elapsed = now - startTime;
+
+          if (root && root.children.length > 1 && elapsed >= MIN_LOADING_TIME) { 
+            const loader = document.getElementById('boot-loader');
+            if (loader) loader.style.display = 'none';
+            clearInterval(checkInterval);
+          }
+        }, 100);
+        
+        // Safety timeout
+        setTimeout(() => clearInterval(checkInterval), 15000);
+      });
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
